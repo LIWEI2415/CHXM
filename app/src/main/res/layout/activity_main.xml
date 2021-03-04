@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--//首先做的是将界面划分为三层，上层放张logo，中间层用于显示说的话，下层是与输入相关-->
+<!--这一块是负责用户进入之后进行的部分展示-->
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".MainActivity" tools:visibility="visible" android:clickable="true" >
+
+     <pl.droidsonroids.gif.GifImageView
+             android:layout_width="match_parent"
+             android:layout_height="90dp"
+             android:src="@drawable/cloud"
+             android:id="@+id/cloud"
+               >
+     </pl.droidsonroids.gif.GifImageView>
+
+        <!--第三层最下方的与输入有关的那一行-->
+    <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mainContainer"
+        android:backgroundTint="@color/darkgray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </androidx.fragment.app.FragmentContainerView>
+
+</LinearLayout>
